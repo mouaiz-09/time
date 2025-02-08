@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>time|abde elmouaiz cherabi</title>
+  <link rel="shortcut icon" href="https://cdn.iconscout.com/icon/free/png-256/free-time-icon-download-in-svg-png-gif-file-formats--countdown-stopwatch-alert-alarm-travel-tours-pack-holidays-icons-1574162.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <!-- إضافة مكتبة AOS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+</head>
+
+<body >
+
+<div class="cont">
+
+</div>
+  <div class="adkar">
+    <p id="dz" style="  font-family: 'Cairo', sans-serif;">
+      
+      سبحان الله وبحمده  
+   
+    </p>
+  </div>
+  <div class="time">
+
+    <div class="days">
+      <p id="day">Email address</p>
+      <p id="nadat"></p>
+    </div>
+    <h2 class="tim" id="time">.... </h2>
+  </div>
+
+
+
+  <script>
+    function gettile() {
+      let tim = document.getElementById('time');
+      var time = new Date();
+
+      // calc secend
+      let secn = time.getSeconds() + 0
+      if (secn < 10) {
+        secn = `0${time.getSeconds()}`
+      }
+      //calc menet
+      let minutes = time.getMinutes()
+      if (minutes < 10) {
+        minutes = `0${time.getMinutes()}`
+      }
+      tim.innerHTML = `
+      ${time.getHours()} : ${minutes} :${secn}
+      
+      `
+      //calc hours
+      let hours = time.getHours()
+      if (hours < 10) {
+        minutes = `0${time.getHours()}`
+      }
+      tim.innerHTML = `
+      ${hours} : ${minutes} :${secn}
+      
+      `
+
+      let day = document.getElementById('day');
+      day.innerHTML = `
+      ${time.getFullYear()}/${time.getMonth()}/${time.getDay()}
+      `
+      //day 
+      const WEEK = ["SUN", "MOND", "TUE", "WED", 'THUE', 'FRI', 'SAT']
+      let daye = document.getElementById('nadat');
+      daye.innerHTML = `
+      ${WEEK[time.getDay()]}
+      `
+
+
+
+    }
+    gettile();
+    setInterval(gettile, 1000)
+
+
+    AOS.init({
+      duration: 1200, // مدة التأثيرات
+      easing: 'ease-in-out', // نوع الحركة
+      once: false, // التأثير يحدث مرة واحدة فقط
+    });
+
+  let dz = document.getElementById('dz');
+  var x =dz.innerHTML
+  console.log(x.length);
+  
+
+  </script>
+
+
+  <script>
+    AOS.init();
+  </script>
+
+</body>
+
+<footer>
+  <a href="https://www.instagram.com/abde.elmouazi/" target="_blank">
+    <i class="fab fa-instagram    instagram-icon " style="font-size: 30px; color: #E4405F;"></i>
+</a>
+</footer>
+
+</html>

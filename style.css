@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+
+}
+
+body {
+  
+    height: 100vh;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    animation: glowingBG 5s infinite alternate;
+    margin: 0;
+    padding: auto
+}
+body {
+    background: linear-gradient(45deg, #000000, #12122b, #0f6023);
+    background-size: 400% 400%;
+    transition: background 0.5s ease-in-out;
+}
+
+
+
+
+@keyframes glowingBG {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+.time {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 500px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.055); /* شفافية */
+    backdrop-filter: blur(10px); /* تأثير الزجاج الضبابي */
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.8); /* وهج مضيء أزرق سماوي */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: 0.4s ease-in-out;
+}
+.time:hover{
+    box-shadow: 0 0 35px rgb(213, 216, 216), 0 0 25px rgba(0, 255, 255, 0.8) ;
+    background: rgba(0, 10, 10, 0.664);
+    transform: scale(1.05);
+  
+}
+.time:hover h2{
+    transform: scale(1.4); /* تكبير خفيف */     
+}
+
+.days{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+}
+
+h1, h2, h3 {
+    color: #ffffff; /* ذهبي */
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    font-family: cursive;
+    font-size: 35px;
+}
+
+h1:hover, h2:hover, h3:hover {
+    color: #FFAA00; /* ذهبي أغمق */
+    transform: scale(1.5); /* تكبير خفيف */
+}
+
+
+p {
+    color: #B0BEC5; /* لون ثانوي رمادي مزرق */
+    font-size: 1.1rem;
+    line-height: 1.8;
+    font-family: cursive;
+    
+}
+p:last-child{
+    color: #ffee00;font-weight: 900;
+    margin-left: 3px;
+
+}
+
+
+
+/*الهواتف*/
+@media (max-width: 768px) {
+ 
+    h1, h2, h3 {
+        font-size: 25px; /* تصغير العناوين */
+        text-align: center; /* توسيط العناوين */
+    }
+
+ 
+    div.time{
+        width: 80% !important;
+    }
+}
+
+
+.adkar{
+    margin: 30px;
+
+}
+.contu{
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    [data-aos] {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+}
+
+
+
+.adkar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.adkar p {
+    font-family: 'Cairo', sans-serif;
+    font-size: 24px;
+    color: #FFD700; /* لون ذهبي فاخر */
+    border-left: 3px solid #FFD700; /* مؤشر الكتابة */
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    direction: rtl;
+    animation: typing 5s steps(38) infinite alternate, blink 10s infinite  ease-in-out;
+}
+
+@keyframes typing {
+    0% { width: 0%; }
+    50% { width: 100%; }
+    70% {width: 100%;}
+    100% { width: 0%; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+footer{
+    padding: 30px;
+
+}
+a{
+    color: whitesmoke;
+  text-decoration: none;
+}
+
+.instagram-icon {
+    font-size: 40px;
+    color: #E4405F;
+    transition: transform 0.3s ease-in-out;
+}
+
+.instagram-icon:hover {
+    transform: rotate(360deg); /* تدوير كامل عند التمرير */
+}
+
+
